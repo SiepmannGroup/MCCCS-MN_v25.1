@@ -8,7 +8,7 @@
 
 Getting Started
 ===============
-* Read the [manual](doc/manual.tex)
+* Read the [manual](doc/manual_from2020.tex)
 * Run and study the [tests](tests/)
 * Talk to group members and ask questions
 
