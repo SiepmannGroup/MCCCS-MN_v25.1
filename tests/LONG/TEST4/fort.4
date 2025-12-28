@@ -1,0 +1,315 @@
+
+ &mc_shared
+     seed=           1
+     nbox=           2
+     nmolty=           1
+     nchain=         200
+     nstep=          6000
+     lstop= F
+     iratio=          500
+     rmin=   1.00000000000000     
+     softcut=   100.000000000000     
+     linit= F
+     lreadq= F
+ /
+
+
+ &analysis
+     iprint=          600
+     imv=         600
+     iblock=         600
+     iratp=           5
+     idiele=           1
+     iheatcapacity=       10000
+     ianalyze=        1000
+     nbin=         250
+     lrdf= F
+     lintra= F
+     lstretch= F
+     lgvst= F
+     lbend= F
+     lete= F
+     lrhoz= F
+     bin_width=  0.200000000000000     
+     lucall= F
+     nvirial=           0
+     starvir=  0.000000000000000E+000
+     stepvir=  0.000000000000000E+000
+     ntemp=           0
+ /
+
+
+ &external_field
+     Elect_field=  0.000000000000000E+000  0.000000000000000E+000
+ /
+
+
+ &mc_volume
+     tavol=  0.400000000000000     
+     iratv=         500
+     pmvlmt=  0.500000000000000        1.00000000000000     
+     nvolb=           1
+     pmvolb=   1.00000000000000     
+     box5=           1
+     box6=           2
+     pmvol=  1.000000000000000E-002
+     pmvolx=  0.000000000000000E+000
+     pmvoly=  0.000000000000000E+000
+     rmvolume=  1.000000000000000E-003
+ /
+
+
+ &mc_swatch
+     pmswat=  0.000000000000000E+000
+     nswaty=           1
+     pmsatc=   1.00000000000000     
+ /
+
+
+ &mc_swap
+     pmswap=  0.120000000000000     
+     pmswmt=   1.00000000000000     
+ /
+
+
+ &mc_cbmc
+     rcutin=   5.00000000000000     
+     pmcb=  0.350000000000000     
+     pmcbmt=   1.00000000000000     
+     pmall=  0.000000000000000E+000
+     nchoi1=          10
+     nchoi=           8
+     nchoir=          10
+     nchoih=           1
+     nchtor=         100
+     nchbna=        1000
+     nchbnb=        1000
+     icbdir=           0
+     icbsta=           0
+     rbsmax=   3.50000000000000     
+     rbsmin=   2.50000000000000     
+     avbmc_version=           0
+     pmbias=  0.000000000000000E+000
+     pmbsmt=  0.000000000000000E+000
+     pmbias2=  0.000000000000000E+000
+     pmfix=  0.000000000000000E+000
+     lrig= F
+     lpresim= F
+     iupdatefix=         100
+ /
+
+
+ &mc_ee
+     pmexpc=  0.000000000000000E+000
+     pmeemt=   1.00000000000000     
+     pmexpc1=  0.000000000000000E+000
+     lexpand= F
+ /
+
+
+ &mc_simple
+     armtra=  1.000000000000000E-002
+     rmtra=  0.300000000000000     
+     rmrot=  0.400000000000000     
+     tatra=  0.500000000000000     
+     tarot=  0.500000000000000     
+     pmtra=  0.650000000000000     
+     pmtrmt=   1.00000000000000     
+     pmromt=   1.00000000000000     
+ /
+
+
+ &mc_flucq
+     taflcq=  0.950000000000000     
+     fqtemp=   5.00000000000000     
+     rmflucq=  0.100000000000000     
+     pmflcq=  0.000000000000000E+000
+     pmfqmt=   1.00000000000000     
+     lflucq= F
+     lqtrans= F
+     fqegp=  0.000000000000000E+000
+     nchoiq=           1           1
+ /
+
+
+SIMULATION_BOX
+! boxlx boxly boxlz rcut kalp rcutnn numDimensionIsIstropic lsolid lrect lideal ltwice temperature pressure
+  34.100   34.100   34.100 14.000  0.200  0.000 0  F  F  F  F  573.00     0.1
+! nchain_1 ... nchain_nmolty ghost_particles
+180 0
+! inix iniy iniz inirot inimix zshift dshift use_linkcell rintramax
+6 6 5 10 0  0.0  3.800 F 0.0
+! boxlx boxly boxlz rcut kalp rcutnn numDimensionIsIstropic lsolid lrect lideal ltwice temperature pressure
+  42.500   42.500   42.500 14.000  0.200  0.000 0  F  F  F  F  573.00     0.1
+! nchain_1 ... nchain_nmolty ghost_particles
+20 0
+! inix iniy iniz inirot inimix zshift dshift use_linkcell rintramax
+5 2 2 0 0  0.0 10.625 F 0.0
+END SIMULATION_BOX
+
+
+MOLECULE_TYPE
+! nunit nugrow ncarbon maxcbmc maxgrow iring lelect lring lrigid lbranch lsetup lq14scale qscale iurot isolute  
+8 8 8 8 1 8  T  F  F  F  F  T 0.5 0 10000
+! unit ntype leaderq
+1 4 1
+! stretching
+1
+2 1
+! bending
+1
+2 3 1
+! torsion
+2
+2 3 4 2
+2 3 7 2
+! unit ntype leaderq
+2 5 2
+! stretching
+2
+1 1
+3 1
+! bending
+2
+3 4 2
+3 7 36
+! torsion
+2
+3 4 5 2
+3 7 8 7
+! unit ntype leaderq
+3 65 3
+! stretching
+3
+2 1
+4 1
+7 30
+! bending
+3
+2 1 1
+4 5 36
+7 8 35
+! torsion
+1
+4 5 6 5
+! unit ntype leaderq
+4 64 4
+! stretching
+2
+3 1
+5 30
+! bending
+3
+3 2 2
+5 6 35
+3 7 36
+! torsion
+2
+3 2 1 2
+3 7 8 7
+! unit ntype leaderq
+5 62 5
+! stretching
+2
+4 30
+6 29
+! bending
+1
+4 3 36
+! torsion
+2
+4 3 2 2
+4 3 7 2
+! unit ntype leaderq
+6 61 5
+! stretching
+1
+5 29
+! bending
+1
+5 4 35
+! torsion
+1
+5 4 3 5
+! unit ntype leaderq
+7 62 5
+! stretching
+2
+3 30
+8 29
+! bending
+2
+3 2 36
+3 4 36
+! torsion
+2
+3 2 1 2
+3 4 5 2
+! unit ntype leaderq
+8 61 5
+! stretching
+1
+7 29
+! bending
+1
+7 3 35
+! torsion
+2
+7 3 2 7
+7 3 4 7
+END MOLECULE_TYPE
+
+
+MC_SWATCH
+! moltyp1<->moltyp2 nsampos 2xncut
+2 3 1 1 1
+! gswatc 2x(ifrom, iprev)
+1 0 1 0
+! splist
+1 1
+! nswtcb pmswtcb
+1  1.00
+! box numbers
+1 2
+END MC_SWATCH
+
+
+MC_SWAP
+! nswapb pmswapb
+1  1.00
+! box1 box2
+1 2
+END MC_SWAP
+
+
+SAFE_CBMC
+END SAFE_CBMC
+
+
+INTERMOLECULAR_EXCLUSION
+! mol_1 bead_1 mol_2 bead_2
+END INTERMOLECULAR_EXCLUSION
+
+
+INTRAMOLECULAR_SPECIAL
+! inclmol inclbead_1 inclbead_2 inclsign ofscale ofscale2
+END INTRAMOLECULAR_SPECIAL
+
+
+INTRAMOLECULAR_OH15
+! ainclmol ainclbead_1 ainclbead_2 a15type
+1 6 7 2
+1 5 8 2
+END INTRAMOLECULAR_OH15
+
+UNIFORM_BIASING_POTENTIALS
+! for each molecule type, give nbox values
+0.0d0 0.0d0
+END UNIFORM_BIASING_POTENTIALS
+
+
+SPECIFIC_ATOM_TRANSL
+! How many atoms should we be performing translations on?
+! What is the index of those atoms in their respective molecules?
+! What is the molecule type for each atom?
+END SPECIFIC_ATOM_TRANSL

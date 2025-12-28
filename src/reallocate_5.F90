@@ -1,0 +1,57 @@
+! This program is free software: you can redistribute it and/or modify
+! it under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! This program is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU General Public License for more details.
+!
+! You should have received a copy of the GNU General Public License
+! along with this program.  If not, see <www.gnu.org>.
+
+    INTEGER :: istat, lb1, lb1_old, lb2, lb2_old, lb3, lb3_old, lb4, lb4_old, lb5, lb5_old&
+     , ub1, ub1_old, ub2, ub2_old, ub3, ub3_old, ub4, ub4_old, ub5, ub5_old
+
+    IF (allocated(p)) THEN
+       lb1_old = LBOUND(p,1)
+       ub1_old = UBOUND(p,1)
+       lb2_old = LBOUND(p,2)
+       ub2_old = UBOUND(p,2)
+       lb3_old = LBOUND(p,3)
+       ub3_old = UBOUND(p,3)
+       lb4_old = LBOUND(p,4)
+       ub4_old = UBOUND(p,4)
+       lb5_old = LBOUND(p,5)
+       ub5_old = UBOUND(p,5)
+       lb1 = MAX(lb1_new,lb1_old)
+       ub1 = MIN(ub1_new,ub1_old)
+       lb2 = MAX(lb2_new,lb2_old)
+       ub2 = MIN(ub2_new,ub2_old)
+       lb3 = MAX(lb3_new,lb3_old)
+       ub3 = MIN(ub3_new,ub3_old)
+       lb4 = MAX(lb4_new,lb4_old)
+       ub4 = MIN(ub4_new,ub4_old)
+       lb5 = MAX(lb5_new,lb5_old)
+       ub5 = MIN(ub5_new,ub5_old)
+
+       ALLOCATE (work(lb1:ub1,lb2:ub2,lb3:ub3,lb4:ub4,lb5:ub5),STAT=istat)
+       IF (istat /= 0) call err_exit(__FILE__,__LINE__,'',istat)
+
+       work(lb1:ub1,lb2:ub2,lb3:ub3,lb4:ub4,lb5:ub5) = p(lb1:ub1,lb2:ub2,lb3:ub3,lb4:ub4,lb5:ub5)
+
+       DEALLOCATE(p,STAT=istat)
+       IF (istat /= 0) call err_exit(__FILE__,__LINE__,'',istat)
+    END IF
+
+    ALLOCATE(p(lb1_new:ub1_new,lb2_new:ub2_new,lb3_new:ub3_new,lb4_new:ub4_new,lb5_new:ub5_new),STAT=istat)
+    IF (istat /= 0) call err_exit(__FILE__,__LINE__,'',istat)
+
+    p(:,:,:,:,:) = p0
+
+    IF (ALLOCATED(p).AND.ALLOCATED(work)) THEN
+       p(lb1:ub1,lb2:ub2,lb3:ub3,lb4:ub4,lb5:ub5) = work(lb1:ub1,lb2:ub2,lb3:ub3,lb4:ub4,lb5:ub5)
+       DEALLOCATE (work,STAT=istat)
+       IF (istat /= 0) call err_exit(__FILE__,__LINE__,'',istat)
+    END IF

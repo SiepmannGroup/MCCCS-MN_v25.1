@@ -1,0 +1,8 @@
+# The fortran modules provided by this target.
+provides
+ const_math.mod
+ fparser.mod
+ util_files.mod
+ util_runtime.mod
+ util_string.mod
+ var_type.mod

@@ -1,0 +1,615 @@
+Program started at 2014-03-08 22:02:29.387
+Number of processors: 1
+Threads per processor: 1
+ run_num: 1
+ suffix: a
+ L_movie_xyz:  F
+
+***** PROGRAM  =  THE MAGIC BLACK BOX *****
+Isobaric-isothermal ensemble
+Using periodic boundaries in x y z
+3-dimensional periodic box
+Particle coordinates are folded into central box
+CBMC simultaneously grows all beads conected to the same bead
+   with bond lengths/angles generated from Gaussian distribution
+Program will call explct() for explicit-hydrogen models
+Dual Cutoff Configurational-bias Monte Carlo
+Coulombic interactions will be included in the Rosenbluth weights for CBMC growth
+Coulombic inter- and intra-molecular interactions will be calculated
+   using Ewald-sum techniques
+   with additional tail corrections
+Lorentz-Berthelot combining rules apply
+ L_spline:  F
+ L_linear:  F
+*******************************************
+
+NAMELIST MC_SHARED
+------------------------------------------
+Random number seed: 0
+number of boxes in the system: 1
+number of molecule types: 1
+number of chains: 300
+number of cycles: 400
+ iratio: 400
+minimum cutoff (rmin):   1.200 [Ang]
+ softcut:  100.0000000    
+Write checkpoint file every 1800 seconds, and keep the last 1 copies
+ linit:  F
+ lreadq:  F
+
+NAMELIST ANALYSIS
+------------------------------------------
+ iprint: 100
+ imv: 5000
+ iblock: 100
+ iratp: 10
+ idiele: 1
+ iheatcapacity: 5000
+ ianalyze: 50
+ nbin: 250
+ lrdf:  T
+ lintra:  F
+ lstretch:  F
+ lgvst:  F
+ lbend:  F
+ lete:  F
+ lrhoz:  F
+ bin_width:  0.200000000    
+
+SECTION SIMULATION_BOX
+------------------------------------------
+Box 1:   35.500 x   35.500 x   35.500
+   rcut: 14.000 [Ang], kalp:  0.240
+   neighbor list cutoff (rcutnn):  0.000
+   number of dimensions that are isotropic: 0
+   lsolid:  T, lrect:  F, lideal:  F, ltwice:  F
+   temperature:  295.000 [K]
+   external pressure:  0.100000000E+00 [MPa]
+   initial number of chains of each type:   300
+   Ghost particles: 0
+   initial number of chains in x, y and z directions: 5 x 5 x 5
+   initial rotational displacement: 0, inimix: 1, zshift:  0.0, dshift:  2.000
+
+NUMBER OF MOLECULES OF EACH TYPE
+ number of chains of each type:   300
+
+SECTION MOLECULE_TYPE
+------------------------------------------
+molecule type: 1
+   number of units: 24
+   number of units for CBMC growth: 24
+   number of carbons for EH alkane: 24
+   maximum number of units for CBMC: 24
+   maximum number of interior segments for SAFE-CBMC regrowth: 1
+   number of atoms in a ring (if lring=.true.): 24
+   iurot: 0, isolute: 100000, lelect:  T, lring:  F, lrigid:  T, lbranch:  T, lrplc:  F, lsetup:  F, lq14scale:  F, qscale: 0.0
+   energy offset for box 1:     0.0 [K]
+
+   bead 1: bead type 380 [C], charge leader 1
+
+   bead 2: bead type 381 [C], charge leader 2
+
+   bead 3: bead type 380 [C], charge leader 3
+
+   bead 4: bead type 381 [C], charge leader 4
+
+   bead 5: bead type 380 [C], charge leader 5
+
+   bead 6: bead type 381 [C], charge leader 6
+
+   bead 7: bead type 385 [H], charge leader 7
+
+   bead 8: bead type 385 [H], charge leader 8
+
+   bead 9: bead type 385 [H], charge leader 9
+
+   bead 10: bead type 385 [H], charge leader 10
+
+   bead 11: bead type 385 [H], charge leader 11
+
+   bead 12: bead type 385 [H], charge leader 12
+
+   bead 13: bead type 382 [N], charge leader 13
+
+   bead 14: bead type 383 [N], charge leader 14
+
+   bead 15: bead type 382 [N], charge leader 15
+
+   bead 16: bead type 383 [N], charge leader 16
+
+   bead 17: bead type 382 [N], charge leader 17
+
+   bead 18: bead type 383 [N], charge leader 18
+
+   bead 19: bead type 384 [O], charge leader 19
+
+   bead 20: bead type 384 [O], charge leader 20
+
+   bead 21: bead type 384 [O], charge leader 21
+
+   bead 22: bead type 384 [O], charge leader 22
+
+   bead 23: bead type 384 [O], charge leader 23
+
+   bead 24: bead type 384 [O], charge leader 24
+
+MOLECULAR MASS:     258.15702
+
+SPECIAL INTERACTION RULES
+------------------------------------------
+  Total: 0 exclusion rules for intermolecular interactions
+
+  Total: 0 inclusion rules for intramolecular interactions
+
+  Total: 0 special rules for intramolecular 1-5 OH interactions
+
+Molecule type: 1
+
+LJ INCLUSION TABLE
+       1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24
+   1   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   2   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   3   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   4   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   5   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   6   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   7   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   8   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   9   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  10   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  11   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  12   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  13   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  14   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  15   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  16   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  17   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  18   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  19   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  20   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  21   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  22   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  23   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  24   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+
+CHARGE INCLUSION TABLE
+       1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24
+   1   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   2   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   3   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   4   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   5   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   6   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   7   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   8   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+   9   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  10   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  11   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  12   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  13   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  14   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  15   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  16   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  17   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  18   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  19   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  20   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  21   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  22   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  23   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+  24   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+
+1-4 LJ SCALING FACTORS
+             1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19     20     21     22     23     24
+      1  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      2  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      3  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      4  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      5  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      6  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      7  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      8  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      9  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     10  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     11  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     12  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     13  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     14  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     15  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     16  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     17  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     18  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     19  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     20  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     21  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     22  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     23  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     24  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+
+1-4 CHARGE SCALING FACTORS
+             1      2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19     20     21     22     23     24
+      1  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      2  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      3  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      4  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      5  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      6  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      7  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      8  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+      9  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     10  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     11  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     12  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     13  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     14  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     15  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     16  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     17  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     18  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     19  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     20  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     21  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     22  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     23  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+     24  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000  1.000
+
+PAIRWISE LJ AND COULOMB INTERACTIONS
+    i    j         q0(i)         q0(j)     vvdW_1     vvdW_2 ...
+  380  380     -0.242000     -0.242000   122.80       3.6000    
+  380  381     -0.242000      0.408000   122.80       3.6000    
+  380  382     -0.242000      0.008000   121.39       3.2500    
+  380  383     -0.242000     -0.738000   280.34       3.4250    
+  380  384     -0.242000     -0.104000   143.63       3.1500    
+  380  385     -0.242000      0.386000   76.775       2.0500    
+  381  380      0.408000     -0.242000   122.80       3.6000    
+  381  381      0.408000      0.408000   122.80       3.6000    
+  381  382      0.408000      0.008000   121.39       3.2500    
+  381  383      0.408000     -0.738000   280.34       3.4250    
+  381  384      0.408000     -0.104000   143.63       3.1500    
+  381  385      0.408000      0.386000   76.775       2.0500    
+  382  380      0.008000     -0.242000   121.39       3.2500    
+  382  381      0.008000      0.408000   121.39       3.2500    
+  382  382      0.008000      0.008000   120.00       2.9000    
+  382  383      0.008000     -0.738000   277.13       3.0750    
+  382  384      0.008000     -0.104000   141.99       2.8000    
+  382  385      0.008000      0.386000   75.895       1.7000    
+  383  380     -0.738000     -0.242000   280.34       3.4250    
+  383  381     -0.738000      0.408000   280.34       3.4250    
+  383  382     -0.738000      0.008000   277.13       3.0750    
+  383  383     -0.738000     -0.738000   640.00       3.2500    
+  383  384     -0.738000     -0.104000   327.90       2.9750    
+  383  385     -0.738000      0.386000   175.27       1.8750    
+  384  380     -0.104000     -0.242000   143.63       3.1500    
+  384  381     -0.104000      0.408000   143.63       3.1500    
+  384  382     -0.104000      0.008000   141.99       2.8000    
+  384  383     -0.104000     -0.738000   327.90       2.9750    
+  384  384     -0.104000     -0.104000   168.00       2.7000    
+  384  385     -0.104000      0.386000   89.800       1.6000    
+  385  380      0.386000     -0.242000   76.775       2.0500    
+  385  381      0.386000      0.408000   76.775       2.0500    
+  385  382      0.386000      0.008000   75.895       1.7000    
+  385  383      0.386000     -0.738000   175.27       1.8750    
+  385  384      0.386000     -0.104000   89.800       1.6000    
+  385  385      0.386000      0.386000   48.000      0.50000    
+
+NAMELIST TRANSFER
+------------------------------------------
+lopt_bias:  F
+freq_opt_bias: 500
+
+NAMELIST MC_VOLUME
+------------------------------------------
+target volume acceptance ratio (tavol): 0.50
+frequency to adjust maximum volume displacement: 500
+initial maximum volume displacement (rmvol):    0.100
+pmvol:  0.150000000E-02
+pmvolx:  0.333000000    , pmvoly:  0.666670000    
+   pmvlmt for box 1:  1.000000000    
+nvolb: 1
+   box pair 1: between 1 and 2,   pmvolb =  1.000000000    
+
+NAMELIST MC_SWATCH
+------------------------------------------
+pmswat:   0.00000000    
+   number of swatch pairs (nswaty): 1
+   probability of each swatch pair:  1.000000000    
+
+   swatch molecule type pairs:    2    3
+   nsampos: 1, ncut:  1  1
+   molecule 1
+   ncut 1: grom from 1, prev 0
+   molecule 2
+   ncut 1: grom from 1, prev 0
+   splist:    1    1
+   number of swatch box pairs: 1
+   probability of the swatch box pair:  1.000000000    
+   box pair:    1    2
+
+NAMELIST MC_SWAP
+------------------------------------------
+pmswap:   0.00000000    
+   swap probability for molecule type 1 (pmswmt):   1.0000
+   number of swap box pairs for molecule type 1: 1
+   pmswapb:  1.000000000    
+   box pair:    1    2
+
+NAMELIST MC_CBMC
+------------------------------------------
+CBMC inner cutoff (rcutin):  5.000 [Ang]
+AVBMC outer cutoff (rbsmax):  6.000 [Ang], inner cutoff (rbsmin):  2.000 [Ang]
+lpresim:  F
+iupdatefix: 100
+pmcb:   0.00000000    
+
+molecule type: nchoi1  nchoi nchoir nchoih nchtor nchbna nchbnb icbdir icbsta
+            1:     15     10     15      1     10   1000   1000      0      0
+
+molecule type:    pmcbmt         pmall  avbmc_version    pmbias        pmbsmt       pmbias2         pmfix   lrig
+            1:  1.000000       0.00000              0   0.00000       0.00000       0.00000       0.00000      F
+
+NAMELIST MC_FLUCQ
+------------------------------------------
+target fluctuating charge acceptance ratio (taflcq): 0.95
+fluctuating charge temperature:    5.000 [K]
+initial maximum displacement for fluctuating charge moves:  0.100000000E+00
+pmflcq:   0.00000000    
+   nchoiq for each box:   1
+
+molecule type:  lflucq lqtrans   pmfqmt    fqegp
+            1:       F       F   1.0000   0.0000
+
+NAMELIST MC_EE
+------------------------------------------
+pmexpc:   0.00000000    
+   expanded ens. prob. for molecule type 1 (pmeemt):   1.0000, lexpand:  F
+pmexpc1:   0.00000000    
+
+NAMELIST MC_SIMPLE
+------------------------------------------
+pm_atom_tra:   0.00000000    
+initial maximum displacement for atom translation:  0.100000000E-01
+target translation acceptance ratio: 0.50
+initial maximum displacement for molecule translation:  0.300000000    
+pmtra:  0.550000000    
+   translation probability for molecule type 1 (pmtrmt):   1.0000
+target rotation acceptance ratio: 0.50
+initial maximum displacement for molecule rotation:  0.400000000    
+pmrot:  1.000000000    
+   rotational probability for molecule type 1 (pmromt):   1.0000
+
+percentage move probabilities:
+ volume move       :    0.15 %
+ swatch move       :    0.00 %
+ swap move         :    0.00 %
+ CBMC move         :    0.00 %
+ fluct. charge move:    0.00 %
+ expanded ens. move:    0.00 %
+ new EE move       :    0.00 %
+ atom trans. move  :    0.00 %
+ translation move  :   54.85 %
+ rotation move     :   45.00 %
+
+NAMELIST EXTERNAL_FIELD
+------------------------------------------
+Steele 10-4-3 slit pore
+On both sides of the simulation box (z = 0 & z = boxlz)
+Surface material bead type: 190
+Surface atom density:  0.11400 [Ang^-3]
+Surface layer spacing:  3.40000 [Ang]
+a1:  2.46000 [Ang]
+Electric field in z direction:     0.00000000     [V/A]
+
+READING CONFIGURATION FROM RESTART FILE
+------------------------------------------
+new maximum displacements read from restart-file
+   max atom trans. displacement:     0.100000    0.100000    0.100000
+   max volume displacement:        0.1000E+04
+   rmhmat for box 1
+     0.131642885         0.246709861         0.650064012    
+     0.100000000E-02     0.150680397         0.792487224    
+     0.100000000E-02     0.100000000E-02     0.189050904    
+
+box      #1
+   molecule type 1
+      max trans. displacement:     0.296562   0.291069   0.187655
+      max rot. displacement:       0.104222   0.104100   0.121170
+      max fluc. q displacement:    0.100000
+
+new box size read from restart-file
+ibox:  1
+   HMAT COORDINATES
+      45.3029405         -22.8326790          1.58176943    
+      0.00000000          39.0099085         -15.9094395    
+      0.00000000          0.00000000          37.6934040    
+min widths:   38.499774   35.939758   37.693404
+cell length |a|:        45.303
+cell length |b|:        45.201
+cell length |c|:        40.944
+cell angle alpha:       110.785
+cell angle beta:         87.786
+cell angle gamma:       120.341
+
+Finished writing simulation box related info
+
+****Ewald Parameters*****
+ibox:      calp  kmaxl  kmaxm  kmaxn         rcut
+   1:     0.229     12     10     10      14.0000
+ 
+ sumup control
+ number of chains         300
+ number of chains of type           1         300
+ inter lj energy   -3355965.17150510     
+ intra lj energy   0.000000000000000E+000
+ Tail correction   -68741.0663068100     
+ bond vibration    0.000000000000000E+000
+ bond bending      0.000000000000000E+000
+ torsional         0.000000000000000E+000
+ external          0.000000000000000E+000
+ coulombic energy  -542302.793946062     
+ fluc Q energy     0.000000000000000E+000
+ well energy       0.000000000000000E+000
+ total energy      -3898267.96545116     
+ 
+ box             1  initial v   =   -3898267.96545116     
+ surf. tension :   box 1 =      58.83360
+ pressure check:   box 1 =      -7969.64
+ 
+ +++++ start of markov chain +++++
+ 
+ Cycle   Total   Energy    Boxlength   Pressure  Molecules
+   100   35100 -0.3898E+07    45.233    -26130.0  300
+   200   35200 -0.3902E+07    45.233    -30995.9  300
+   300   35300 -0.3882E+07    45.233     10118.2  300
+ Box            1
+ Type  1 bn  21871.  21979.  21797.  18045.  18025.  18104.
+         bs  10847.  11005.  10848.   8965.   8943.   9020.
+ max.displ.     0.2942    0.2915    0.1868    0.1036    0.1033    0.1207
+   400   35400 -0.3891E+07    45.319     -1406.6  300
+ 
+ +++++ end of markov chain +++++
+ 
+ ### Translations ###
+ 
+ molecule typ =           1  in box           1
+ x-dir: attempts =   21871.0   ratio = 0.496   max.displ. = 0.2942E+00
+ y-dir: attempts =   21979.0   ratio = 0.501   max.displ. = 0.2915E+00
+ z-dir: attempts =   21797.0   ratio = 0.498   max.displ. = 0.1868E+00
+ 
+ ### Rotations ###
+ 
+ molecule typ =           1  in box           1
+ x-dir: attempts =   18045.0   ratio = 0.497   max.displ. = 0.1036E+00
+ y-dir: attempts =   18025.0   ratio = 0.496   max.displ. = 0.1033E+00
+ z-dir: attempts =   18104.0   ratio = 0.498   max.displ. = 0.1207E+00
+ 
+ 
+ ### Volume change       ###
+ h-matrix attempts =    11.0   ratio = 0.364   max.displ. = 0.1316E+00
+ h-matrix attempts =     0.0   ratio = 0.000   max.displ. = 0.1000E-02
+ h-matrix attempts =     0.0   ratio = 0.000   max.displ. = 0.1000E-02
+ h-matrix attempts =    14.0   ratio = 0.357   max.displ. = 0.2467E+00
+ h-matrix attempts =    36.0   ratio = 0.444   max.displ. = 0.1507E+00
+ h-matrix attempts =     0.0   ratio = 0.000   max.displ. = 0.1000E-02
+ h-matrix attempts =    20.0   ratio = 0.600   max.displ. = 0.6501E+00
+ h-matrix attempts =    34.0   ratio = 0.382   max.displ. = 0.7925E+00
+ h-matrix attempts =    64.0   ratio = 0.422   max.displ. = 0.1891E+00
+
+### Molecule swap       ###
+
+molecule typ = 1
+between box 1 and 2 into box 1   uattempts = 0 attempts = 0   accepted = 0
+between box 1 and 2 into box 2   uattempts = 0 attempts = 0   accepted = 0
+number of times move in: 0  accepted = 0
+number of times move out: 0  accepted = 0
+
+### Molecule swatch     ###
+
+pair typ = 1
+moltyps = 2 and 3
+between box 1 and 2 into box 1   uattempts = 0  attempts = 0  accepted = 0
+between box 1 and 2 into box 2   uattempts = 0  attempts = 0  accepted = 0
+ 
+ ### Charge Fluctuation  ###
+ 
+ 
+ ### Expanded Ensemble Move  ###
+ 
+
+New Biasing Potential
+
+molecule  1:   0.00000000     
+ 
+ sumup control
+ number of chains         300
+ number of chains of type           1         300
+ inter lj energy   -3355798.68313189     
+ intra lj energy   0.000000000000000E+000
+ Tail correction   -68752.7034531191     
+ bond vibration    0.000000000000000E+000
+ bond bending      0.000000000000000E+000
+ torsional         0.000000000000000E+000
+ external          0.000000000000000E+000
+ coulombic energy  -535163.317423763     
+ fluc Q energy     0.000000000000000E+000
+ well energy       0.000000000000000E+000
+ total energy      -3890962.00055565     
+ 
+ vstart       =     -3898267.9654511609
+ vend         =     -3890962.0005556527
+ vbox         =     -3890962.0005559665
+ 
+ Averages and fluctuations                        Box  1
+ 
+ pressure                           [kPa] =     -6635.17
+ pressure              [simulation units] =    -0.480584
+ surface tension                   [mN/m] =     -19.4762
+ chem. potential of type   1          [K] =        0.000
+ boxlength                            [A] =       45.265
+ boxlength                            [A] =       45.200
+ boxlength                            [A] =       40.978
+ box angle                          [deg] =      110.529
+ box angle                          [deg] =       87.938
+ box angle                          [deg] =      120.301
+ no. of chains of type     1              =      300.000
+ molar volume                  [cm^3/mol] =      133.986
+ specific density                [g/cm^3] =     1.926750
+ number density of type    1 [chain/nm^3] =      4.49461
+ molfraction of type       1              =    1.0000000
+ mean sete length of type  1        [A^2] =       17.634
+ 
+ Total energy [K per system and kJ/mol per chain] =   -3888884.77    -107.78
+ Inter LJ     [K per system and kJ/mol per chain] =   -3349423.29     -92.83
+ Tail  LJ     [K per system and kJ/mol per chain] =     -68604.74      -1.90
+ Intra LJ     [K per system and kJ/mol per chain] =          0.00       0.00
+ Stretch      [K per system and kJ/mol per chain] =          0.00       0.00
+ Bond bending [K per system and kJ/mol per chain] =          0.00       0.00
+ Torsion      [K per system and kJ/mol per chain] =          0.00       0.00
+ Coulomb      [K per system and kJ/mol per chain] =    -539461.48     -14.95
+ External pot [K per system and kJ/mol per chain] =          0.00       0.00
+ 3-body Garo  [K per system and kJ/mol per chain] =          0.00       0.00
+ Fluc Q       [K per system and kJ/mol per chain] =          0.00       0.00
+ 
+ fluctuation in <vtot> =     7118.05
+ 
+ type  box       vinter       vintra         vtor        vbend        vtail
+    1    1      0.00000      0.00000      0.00000      0.00000      0.00000
+ 
+ 
+ specific density box  1 =  0.19268E+01  0.19289E-02  0.11136E-02
+ system volume    box  1 =  0.66747E+05  0.66846E+02  0.38594E+02
+ pressure         box  1 =  -6635.2       6459.1       3729.1    
+ surface tension  box  1 =    -19.47623     56.53080     32.63807
+ 
+ Total energy     box  1 = -0.38889E+07  0.26566E+04  0.15338E+04
+ Inter LJ         box  1 = -0.33494E+07  0.35219E+04  0.20333E+04
+ Tail  LJ         box  1 = -0.68605E+05  0.68680E+02  0.39652E+02
+ Intra LJ         box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ Stretch          box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ Bond bending     box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ Torsion          box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ Coulomb          box  1 = -0.53946E+06  0.17731E+04  0.10237E+04
+ External pot     box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ 3-body Garo      box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ Fluc Q           box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ 
+ Enthalpy Inst.[kJ/mol] for box  1 =    -108.6797       0.8913       0.5146
+ Enthalpy Ext. [kJ/mol] for box  1 =    -107.7738       0.0724       0.0418
+ 
+ Cp residual(J/Kmol) =   16.1373099    
+   H2 =  0.151187528E+14
+   H  =  -3888277.52    
+ 
+ chemical potential  itype  1 box  1 =         0.000        0.000        0.000
+ mean sete length    itype  1 box  1 =        17.634        0.000        0.000
+ number density      itype  1 box  1 =   0.44946E+01  0.44995E-02  0.25978E-02
+ mole fraction       itype  1 box  1 =     1.0000000    0.0000000    0.0000000
+ 
+ 
+ -----block averages ------
+  ------------ box:  1
+ block    energy     density    pressure    surf ten   mol fracs
+   1 -0.3893E+07  0.1930E+01 -0.9547E+04  0.5992E+02  0.1000E+01
+   2 -0.3888E+07  0.1927E+01  0.4516E+04 -0.3411E+02  0.1000E+01
+   3 -0.3889E+07  0.1924E+01 -0.1099E+05 -0.9751E+02  0.1000E+01
+   4 -0.3886E+07  0.1926E+01 -0.1052E+05 -0.6198E+01  0.1000E+01
+ Program ended at 2014-03-08 22:58:25.529

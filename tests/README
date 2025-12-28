@@ -1,0 +1,31 @@
+To run the test suite:
+        Make sure you have loaded the necessary libraries (ompi, intel, cmake)
+        ./testRunner.py #runs test suite and generates ../test-yearmonthdate
+        to check if compiles correctly open ../test-yearmonthdate/build.log
+        to check if runs successfully open ../test-yearmonthdate/main.log
+	tests in the SHORT directory are designed to take less than 15 seconds on 1 processor and the
+	tests in the LONG directory are designed to take about 1 hour
+
+TEST1:  hydroxyethyl acrylate, NpT ensemble
+	see K. A. Maerzke, N. E. Schultz, R. B. Ross, and J. I. Siepmann, J. Phys. Chem. B 113, 6415-6425 (2009)
+TEST2:  electric field in NVT ensemble (52 mNT, 204 n-decane)
+	see K. A. Maerzke and J. I. Siepmann, J. Phys. Chem. B 113 (2009)
+TEST3:  tabulated electrostatic potential (NpT SPCE)
+	see upcoming coarse-grain water paper or S. Izvekov, J. M. J. Swanson, and G. A. Voth, 
+	J. Phys. Chem. B 112, 4711-4724 (2008).
+TEST4:  1,2-butanediol, NVT-Gibbs ensemble
+	see M. S. Kelkar, J. L. Rafferty, J. I. Siepmann, and E. J. Maginn, Fluid Phase Equil. 260, 218-231 (2007)
+TEST5:  SiO2/H2O mixture with the Garofalini potential
+	WILL NOT RUN ON MORE THAN 1 PROCESSOR!!
+	see K. E. Anderson, M. M. Hirshmann, and J. I. Siepmann, J. Phys. Chem. B 112, 13005-13014 (2008)
+TEST6:  TIP4P, NVT-Gibbs ensemble
+	see M. Lisal, I. Nezbeda, and W. R. Smith, J. Phys. Chem. B 108, 7412-7414 (2004)
+	or C. Vega, J. L. F. Abascal, and I. Nezbeda, J. Chem. Phys. 125, 034503 (2006) 	
+TEST7:  RPLC with PAHs
+	see J. L. Rafferty, J. I. Siepmann, and M. R. Schure, Anal. Chem., submitted for publication (2009)
+TEST8:  n-octane, NVT-Gibbs ensemble, initializes the system
+        see M. G. Martin and J. I. Siepmann, J. Phys. Chem. B, 102, 2569-2577 (1998)
+TEST9:  solid TATB, NpT ensemble
+	see N. Rai, D. Bhatt, J. I. Siepmann, and L. E. Fried, J. Chem. Phys., 129, 194510 (2008) 
+TEST10: 1-butanol/water adsorption, NPT-Gibbs, 3 box; note that grid spacing is larger than normal (0.4 Angst.)
+        see R. DeJaco, P. Bai, M. Tsapatsis, and J. I. Siepmann, Langmuir, "Adsorptive Separation of 1-Butanol from Aqueous Solutions using MFI- and FER-type Zeolite Frameworks: A Monte Carlo Study" (2016)

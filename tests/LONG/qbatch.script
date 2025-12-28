@@ -1,0 +1,25 @@
+#!/bin/bash -l
+#PBS -l nodes=2:ppn=8,walltime=02:00:00
+#PBS -N name
+#PBS -m ae
+#PBS -e stderr
+#PBS -o stdout
+#PBS -q devel
+
+DATA=$PBS_O_WORKDIR
+cd $DATA
+
+NODE=($(cat $PBS_NODEFILE | uniq))
+#echo ${NODE[@]} > tmp-$PBS_JOBID
+
+inode=-1
+ijob=0
+
+for ((K=1;K<=9;K++)); do
+    [ $((ijob++ % 8)) -eq 0 ] && ((inode++))
+    ssh ${NODE[inode]} $DATA/sub$K.script &
+done
+
+wait
+
+exit 0

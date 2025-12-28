@@ -1,0 +1,504 @@
+Program started at 2015-05-26 11:43:50.001
+Number of processors: 2
+Threads per processor: 1
+ run_num: 1    
+ suffix: a
+ L_movie_xyz:  F
+
+***** PROGRAM  =  THE MAGIC BLACK BOX *****
+Isobaric-isothermal ensemble
+Using periodic boundaries in x y z
+3-dimensional periodic box
+Particle coordinates are folded into central box
+Additional center-of-mass cutoff on computed rcmu
+CBMC simultaneously grows all beads conected to the same bead
+   with bond lengths/angles generated from Gaussian distribution
+Program will call explct() for explicit-hydrogen models
+Dual Cutoff Configurational-bias Monte Carlo
+Coulombic interactions will be included in the Rosenbluth weights for CBMC growth
+Coulombic inter- and intra-molecular interactions will be calculated
+   using tabulated potential with linear interpolation
+   with additional tail corrections
+Lorentz-Berthelot combining rules apply
+ L_spline:  F
+ L_linear:  F
+*******************************************
+
+NAMELIST MC_SHARED
+------------------------------------------
+Random number seed: 1
+number of boxes in the system: 1
+number of molecule types: 1
+number of chains: 1000
+number of cycles: 6000
+ iratio: 500
+minimum cutoff (rmin):   1.200 [Ang]
+ softcut:  100.0000000    
+Write checkpoint file every 1800 seconds, and keep the last 1 copies
+ linit:  F
+ lreadq:  F
+
+NAMELIST ANALYSIS
+------------------------------------------
+ iprint: 600
+ imv: 600
+ iblock: 600
+ iratp: 5
+ idiele: 1
+ iheatcapacity: 1000000
+ ianalyze: 50000000
+ nbin: 250
+ lrdf:  T
+ lintra:  F
+ lstretch:  F
+ lgvst:  F
+ lbend:  F
+ lete:  F
+ lrhoz:  F
+ bin_width:  0.200000000    
+ lucall:  F
+
+SECTION SIMULATION_BOX
+------------------------------------------
+Box 1:   32.000 x   32.000 x   32.000
+   rcut: 10.000 [Ang], kalp:  0.350
+   neighbor list cutoff (rcutnn):  0.000
+   number of dimensions that are isotropic: 0
+   lsolid:  F, lrect:  F, lideal:  F, ltwice:  F
+   temperature:  300.000 [K]
+   external pressure:  0.100000000E+00 [MPa]
+   initial number of chains of each type:   1000
+   Ghost particles: 0
+   initial number of chains in x, y and z directions: 10 x 10 x 10
+   initial rotational displacement: 0, inimix: 1, zshift:   0.0, dshift:   1.600
+
+NUMBER OF MOLECULES OF EACH TYPE
+ number of chains of each type:   1000
+
+SECTION MOLECULE_TYPE
+------------------------------------------
+molecule type: 1
+   number of units: 3
+   number of units for CBMC growth: 3
+   number of carbons for EH alkane: 3
+   maximum number of units for CBMC: 3
+   maximum number of interior segments for SAFE-CBMC regrowth: 1
+   number of atoms in a ring (if lring=.true.): 3
+   iurot: 0, isolute: 10000, lelect:  T, lring:  F, lrigid:  T, lbranch:  T, lsetup:  F, lq14scale:  F, qscale: 0.5
+
+   bead 1: bead type 107 [O], charge leader 1
+      bonded to bead 2, type 25, bond length:  1.00000, k/2:   0.00000000    
+      bonded to bead 3, type 25, bond length:  1.00000, k/2:   0.00000000    
+
+   bead 2: bead type 108 [H], charge leader 2
+      bonded to bead 1, type 25, bond length:  1.00000, k/2:   0.00000000    
+
+   bead 3: bead type 108 [H], charge leader 3
+      bonded to bead 1, type 25, bond length:  1.00000, k/2:   0.00000000    
+
+MOLECULAR MASS:      18.01580
+
+SPECIAL INTERACTION RULES
+------------------------------------------
+  Total: 0 exclusion rules for intermolecular interactions
+
+  Total: 0 inclusion rules for intramolecular interactions
+
+  Total: 0 special rules for intramolecular 1-5 OH interactions
+
+SECTION UNIFORM_BIASING_POTENTIALS
+------------------------------------------
+Molecule type, biasing potential 1 through nbox [K]: 
+     0.000
+
+SECTION SPECIFIC_ATOM_TRANSL
+------------------------------------------
+
+Molecule type: 1
+
+LJ INCLUSION TABLE
+       1   2   3
+   1   F   F   F
+   2   F   F   F
+   3   F   F   F
+
+CHARGE INCLUSION TABLE
+       1   2   3
+   1   F   F   F
+   2   F   F   F
+   3   F   F   F
+
+1-4 LJ SCALING FACTORS
+             1      2      3
+      1  1.000  1.000  1.000
+      2  1.000  1.000  1.000
+      3  1.000  1.000  1.000
+
+1-4 CHARGE SCALING FACTORS
+             1      2      3
+      1  1.000  1.000  1.000
+      2  1.000  1.000  1.000
+      3  1.000  1.000  1.000
+
+PAIRWISE LJ AND COULOMB INTERACTIONS
+    i    j         q0(i)         q0(j)     vvdW_1     vvdW_2 ...
+  107  107     -0.847600     -0.847600   312.78       3.1655    
+  107  108     -0.847600      0.423800   0.0000       0.0000    
+  108  107      0.423800     -0.847600   0.0000       0.0000    
+  108  108      0.423800      0.423800   0.0000       0.0000    
+
+NAMELIST TRANSFER
+------------------------------------------
+lopt_bias:  F
+freq_opt_bias: 500
+
+NAMELIST MC_VOLUME
+------------------------------------------
+target volume acceptance ratio (tavol): 0.40
+frequency to adjust maximum volume displacement: 500
+initial maximum volume displacement (rmvol): 1000.000
+pmvol:  0.260000000E-03
+   pmvlmt for box 1:  1.000000000    
+nvolb: 1
+   box pair 1: between 1 and 2,   pmvolb =  1.000000000    
+
+NAMELIST MC_SWATCH
+------------------------------------------
+pmswat:   0.00000000    
+   number of swatch pairs (nswaty): 1
+   probability of each swatch pair:  1.000000000    
+
+   swatch molecule type pairs:    2    3
+   nsampos: 1, ncut:  1  1
+   molecule 1
+   ncut 1: grom from 1, prev 0
+   molecule 2
+   ncut 1: grom from 1, prev 0
+   splist:    1    1
+   number of swatch box pairs: 1
+   probability of the swatch box pair:  1.000000000    
+   box pair:    1    2
+
+NAMELIST MC_SWAP
+------------------------------------------
+pmswap:   0.00000000    
+   swap probability for molecule type 1 (pmswmt):   1.0000
+   number of swap box pairs for molecule type 1: 1
+   pmswapb:  1.000000000    
+   box pair:    1    2
+
+NAMELIST MC_CBMC
+------------------------------------------
+CBMC inner cutoff (rcutin):  5.000 [Ang]
+AVBMC outer cutoff (rbsmax):  3.500 [Ang], inner cutoff (rbsmin):  2.500 [Ang]
+lpresim:  F
+iupdatefix: 100
+pmcb:   0.00000000    
+
+molecule type: nchoi1  nchoi nchoir nchoih nchtor nchbna nchbnb icbdir icbsta
+            1:     10      8     10      1    100   1000   1000      0      0
+
+molecule type:    pmcbmt         pmall  avbmc_version    pmbias        pmbsmt       pmbias2         pmfix   lrig
+            1:  1.000000       0.00000              0   0.00000       0.00000       0.00000       0.00000      F
+
+NAMELIST MC_FLUCQ
+------------------------------------------
+target fluctuating charge acceptance ratio (taflcq): 0.95
+fluctuating charge temperature:    5.000 [K]
+initial maximum displacement for fluctuating charge moves:  0.100000000E+00
+pmflcq:   0.00000000    
+   nchoiq for each box:   1
+nswapq: 0
+
+molecule type:  lflucq lqtrans   pmfqmt            fqegp
+            1:       F       F   1.0000           0.0000
+
+NAMELIST MC_EE
+------------------------------------------
+pmexpc:   0.00000000    
+   expanded ens. prob. for molecule type 1 (pmeemt):   1.0000, lexpand:  F
+pmexpc1:   0.00000000    
+
+NAMELIST MC_SIMPLE
+------------------------------------------
+pm_atom_tra:   0.00000000    
+initial maximum displacement for atom translation:  0.100000000E-01
+target translation acceptance ratio: 0.50
+initial maximum displacement for molecule translation:  0.300000000    
+pmtra:  0.500130000    
+   translation probability for molecule type 1 (pmtrmt):   1.0000
+target rotation acceptance ratio: 0.50
+initial maximum displacement for molecule rotation:  0.400000000    
+pmrot:  1.000000000    
+   rotational probability for molecule type 1 (pmromt):   1.0000
+
+percentage move probabilities:
+ volume move       :    0.03 %
+ swatch move       :    0.00 %
+ swap move         :    0.00 %
+ CBMC move         :    0.00 %
+ fluct. charge move:    0.00 %
+ expanded ens. move:    0.00 %
+ new EE move       :    0.00 %
+ atom trans. move  :    0.00 %
+ translation move  :   49.99 %
+ rotation move     :   49.99 %
+
+NAMELIST EXTERNAL_FIELD
+------------------------------------------
+Steele 10-4-3 slit pore
+On both sides of the simulation box (z = 0 & z = boxlz)
+Surface material bead type: 190
+Surface atom density:  0.11400 [Ang^-3]
+Surface layer spacing:  3.40000 [Ang]
+a1:  2.46000 [Ang]
+Electric field in z direction:     0.00000000     [V/A]
+
+READING CONFIGURATION FROM RESTART FILE
+------------------------------------------
+new maximum displacements read from restart-file
+   max atom trans. displacement:     0.010000    0.010000    0.010000
+   max volume displacement:        0.3647E+03
+
+box      #1
+   molecule type 1
+      max trans. displacement:     0.321700   0.321700   0.321700
+      max rot. displacement:       0.406400   0.406400   0.406400
+      max fluc. q displacement:    0.100000
+
+new box size read from restart-file
+ dimension box 1: a =    30.980098  b =    30.980098  c =    30.980098
+
+Finished writing simulation box related info
+ 
+ sumup control
+ number of chains        1000
+ number of chains of type           1        1000
+ inter lj energy    1004756.02056257     
+ intra lj energy   0.000000000000000E+000
+ Tail correction   -22159.5983844262     
+ bond vibration    0.000000000000000E+000
+ bond bending      0.000000000000000E+000
+ torsional         0.000000000000000E+000
+ external          0.000000000000000E+000
+ coulombic energy  -6667731.94074065     
+ fluc Q energy     0.000000000000000E+000
+ well energy       0.000000000000000E+000
+ total energy      -5662975.92017808     
+ 
+ box             1  initial v   =   -5662975.92017808     
+ surf. tension :   box 1 =     -20.92824
+ pressure check:   box 1 =    -172365.46
+ 
+ +++++ start of markov chain +++++
+ 
+ Cycle   Total   Energy    Boxlength   Pressure  Molecules
+ Box            1
+ Type  1 bn  82902.  83254.  83605.  83197.  83157.  83753.
+         bs  41250.  41341.  41797.  41563.  41474.  41825.
+ max.displ.     0.3201    0.3195    0.3217    0.4061    0.4054    0.4059
+ volume change:  bn =   132.0   bs =    48.0   max.displ. = 0.33156E+03
+   600  450600 -0.5676E+07    31.027    217367.9 1000
+ Box            1
+ Type  1 bn  83227.  83645.  83337.  83227.  83454.  82985.
+         bs  41638.  41762.  41541.  41297.  41741.  41720.
+ max.displ.     0.3203    0.3190    0.3207    0.4030    0.4055    0.4081
+ volume change:  bn =   125.0   bs =    53.0   max.displ. = 0.35145E+03
+  1200  451200 -0.5640E+07    31.068    167536.0 1000
+ Box            1
+ Type  1 bn  83474.  83461.  83533.  83506.  83074.  82819.
+         bs  41942.  42013.  41650.  41947.  41755.  41075.
+ max.displ.     0.3219    0.3212    0.3198    0.4048    0.4076    0.4048
+ volume change:  bn =   133.0   bs =    62.0   max.displ. = 0.40958E+03
+  1800  451800 -0.5669E+07    30.963     59849.5 1000
+ Box            1
+ Type  1 bn  83369.  83186.  83022.  83469.  83236.  83589.
+         bs  41475.  41575.  41767.  41746.  41467.  41870.
+ max.displ.     0.3203    0.3210    0.3218    0.4049    0.4062    0.4056
+ volume change:  bn =   129.0   bs =    39.0   max.displ. = 0.30957E+03
+  2400  452400 -0.5647E+07    31.156     32881.1 1000
+ Box            1
+ Type  1 bn  83288.  83232.  83622.  83435.  83080.  83203.
+         bs  41493.  41406.  41879.  41667.  41701.  41440.
+ max.displ.     0.3191    0.3194    0.3223    0.4045    0.4077    0.4040
+ volume change:  bn =   140.0   bs =    67.0   max.displ. = 0.37038E+03
+ Box            1
+ Type  1 bn  83113.  83655.  82957.  83425.  83319.  83397.
+         bs  42186.  42179.  41457.  41834.  41771.  42177.
+ max.displ.     0.3240    0.3221    0.3221    0.4056    0.4088    0.4086
+ volume change:  bn =   134.0   bs =    54.0   max.displ. = 0.37314E+03
+  3000  453000 -0.5618E+07    31.202     76630.0 1000
+ Box            1
+ Type  1 bn  83177.  83480.  83006.  83175.  83142.  83890.
+         bs  41575.  41394.  41605.  41536.  41782.  41656.
+ max.displ.     0.3239    0.3194    0.3229    0.4051    0.4109    0.4058
+ volume change:  bn =   130.0   bs =    41.0   max.displ. = 0.29421E+03
+  3600  453600 -0.5653E+07    31.136     97824.2 1000
+ Box            1
+ Type  1 bn  83123.  83174.  83151.  83495.  83460.  83450.
+         bs  41171.  41621.  41358.  41786.  41205.  41823.
+ max.displ.     0.3208    0.3197    0.3212    0.4055    0.4057    0.4068
+ volume change:  bn =   147.0   bs =    70.0   max.displ. = 0.35025E+03
+  4200  454200 -0.5643E+07    31.206    138898.5 1000
+ Box            1
+ Type  1 bn  83593.  82971.  83306.  83542.  83458.  82992.
+         bs  41674.  41349.  41699.  41731.  41941.  41242.
+ max.displ.     0.3199    0.3187    0.3216    0.4051    0.4078    0.4043
+ volume change:  bn =   138.0   bs =    62.0   max.displ. = 0.39339E+03
+  4800  454800 -0.5651E+07    31.100    -45676.0 1000
+ Box            1
+ Type  1 bn  82571.  83802.  83517.  83230.  83241.  83486.
+         bs  41376.  42178.  41647.  41466.  41837.  41808.
+ max.displ.     0.3206    0.3208    0.3207    0.4037    0.4099    0.4049
+ volume change:  bn =   153.0   bs =    53.0   max.displ. = 0.34068E+03
+  5400  455400 -0.5630E+07    31.285    -19914.0 1000
+ Box            1
+ Type  1 bn  83408.  83195.  83261.  83312.  83517.  83193.
+         bs  41904.  41739.  41299.  41778.  41276.  41828.
+ max.displ.     0.3221    0.3218    0.3182    0.4049    0.4052    0.4072
+ volume change:  bn =   114.0   bs =    43.0   max.displ. = 0.32126E+03
+ Box            1
+ Type  1 bn  83768.  83622.  83067.  83583.  82900.  82934.
+         bs  42078.  41493.  41629.  41634.  41325.  41367.
+ max.displ.     0.3236    0.3194    0.3189    0.4033    0.4040    0.4062
+ volume change:  bn =   126.0   bs =    58.0   max.displ. = 0.36970E+03
+  6000  456000 -0.5667E+07    31.110    -50833.2 1000
+ 
+ +++++ end of markov chain +++++
+ 
+ ### Translations ###
+ 
+molecule typ = 1   OHH  in box           1
+ x-dir: attempts =  999013.0   ratio = 0.500   max.displ. = 0.3236E+00
+ y-dir: attempts = 1000677.0   ratio = 0.500   max.displ. = 0.3194E+00
+ z-dir: attempts =  999384.0   ratio = 0.500   max.displ. = 0.3189E+00
+ 
+ ### Rotations ###
+ 
+molecule typ = 1    OHH  in box           1
+ x-dir: attempts = 1000596.0   ratio = 0.500   max.displ. = 0.4033E+00
+ y-dir: attempts =  999038.0   ratio = 0.500   max.displ. = 0.4040E+00
+ z-dir: attempts =  999691.0   ratio = 0.500   max.displ. = 0.4062E+00
+ 
+ 
+ ### Volume change       ###
+ attempts =  1601.0   ratio = 0.406   max.displ. = 0.3697E+03
+
+### Molecule swap       ###
+
+molecule typ = 1    OHH
+between box 1 and 2 into box 1   uattempts = 0 attempts = 0   accepted = 0
+between box 1 and 2 into box 2   uattempts = 0 attempts = 0   accepted = 0
+number of times move in: 0  accepted = 0
+number of times move out: 0  accepted = 0
+ 
+ ### Charge Fluctuation  ###
+ 
+ 
+ ### Expanded Ensemble Move  ###
+ 
+
+New Biasing Potential
+
+molecule  1:   0.00000000     
+ 
+ sumup control
+ number of chains        1000
+ number of chains of type           1        1000
+ inter lj energy    1008143.15054907     
+ intra lj energy   0.000000000000000E+000
+ Tail correction   -21883.5880418806     
+ bond vibration    0.000000000000000E+000
+ bond bending      0.000000000000000E+000
+ torsional         0.000000000000000E+000
+ external          0.000000000000000E+000
+ coulombic energy  -6674984.05616521     
+ fluc Q energy     0.000000000000000E+000
+ well energy       0.000000000000000E+000
+ total energy      -5666840.90561614     
+ 
+ vstart       =     -5662975.9201780800
+ vend         =     -5666840.9056161372
+ vbox         =     -5666840.9056155328
+ 
+ Averages and fluctuations                        Box  1
+ 
+ pressure                           [kPa] =     57338.08
+ pressure              [simulation units] =     4.152981
+ surface tension                   [mN/m] =     115.9534
+ chem. potential of type   1          [K] =        0.000
+ boxlength                            [A] =       31.112
+ boxlength                            [A] =       31.112
+ boxlength                            [A] =       31.112
+ no. of chains of type     1              =     1000.000
+ molar volume                  [cm^3/mol] =       18.135
+ specific density                [g/cm^3] =     0.993424
+ number density of type    1 [chain/nm^3] =     33.20718
+ molfraction of type       1              =    1.0000000
+ mean sete length of type  1        [A^2] =        1.000
+ 
+ Total energy [K per system and kJ/mol per chain] =   -5658073.82     -47.04
+ Inter LJ     [K per system and kJ/mol per chain] =     991433.06       8.24
+ Tail  LJ     [K per system and kJ/mol per chain] =     -21879.75      -0.18
+ Intra LJ     [K per system and kJ/mol per chain] =          0.00       0.00
+ Stretch      [K per system and kJ/mol per chain] =          0.00       0.00
+ Bond bending [K per system and kJ/mol per chain] =          0.00       0.00
+ Torsion      [K per system and kJ/mol per chain] =          0.00       0.00
+ Coulomb      [K per system and kJ/mol per chain] =   -6649506.88     -55.29
+ External pot [K per system and kJ/mol per chain] =          0.00       0.00
+ 3-body Garo  [K per system and kJ/mol per chain] =          0.00       0.00
+ Fluc Q       [K per system and kJ/mol per chain] =          0.00       0.00
+ 
+ fluctuation in <vtot> =    22526.93
+ 
+ type  box       vinter       vintra         vtor        vbend        vtail
+    1    1      0.00000      0.00000      0.00000      0.00000      0.00000
+ 
+ 
+ specific density box  1 =  0.99342E+00  0.52531E-02  0.17510E-02
+ system volume    box  1 =  0.30115E+05  0.15865E+03  0.52882E+02
+ pressure         box  1 =   57338.       37475.       12492.    
+ surface tension  box  1 =    115.95338    132.07562     44.02521
+ 
+ Total energy     box  1 = -0.56581E+07  0.11361E+05  0.37870E+04
+ Inter LJ         box  1 =  0.99143E+06  0.78109E+04  0.26036E+04
+ Tail  LJ         box  1 = -0.21880E+05  0.11570E+03  0.38566E+02
+ Intra LJ         box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ Stretch          box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ Bond bending     box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ Torsion          box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ Coulomb          box  1 = -0.66495E+07  0.17910E+05  0.59702E+04
+ External pot     box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ 3-body Garo      box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ Fluc Q           box  1 =  0.00000E+00  0.00000E+00  0.00000E+00
+ 
+ Enthalpy Inst.[kJ/mol] for box  1 =     -46.0062       0.7004       0.2335
+ Enthalpy Ext. [kJ/mol] for box  1 =     -47.0418       0.0950       0.0317
+ 
+ Cp residual(J/Kmol) =   46.8822171    
+   H2 =  0.320118385E+14
+   H  =  -5657855.69    
+ 
+ chemical potential  itype  1 box  1 =         0.000        0.000        0.000
+ mean sete length    itype  1 box  1 =         1.000        0.000        0.000
+ number density      itype  1 box  1 =   0.33207E+02  0.17560E+00  0.58532E-01
+ mole fraction       itype  1 box  1 =     1.0000000    0.0000000    0.0000000
+ 
+ 
+ -----block averages ------
+  ------------ box:  1
+ block    energy     density    pressure    surf ten   mol fracs
+   1 -0.5666E+07  0.1004E+01  0.5066E+05  0.7528E+02  0.1000E+01
+   2 -0.5656E+07  0.9989E+00  0.4168E+05  0.5064E+02  0.1000E+01
+   3 -0.5653E+07  0.9993E+00  0.1189E+06  0.2872E+03  0.1000E+01
+   4 -0.5658E+07  0.9948E+00  0.5535E+05 -0.4303E+02  0.1000E+01
+   5 -0.5639E+07  0.9897E+00  0.8544E+04 -0.3231E+02  0.1000E+01
+   6 -0.5645E+07  0.9915E+00  0.9363E+05 -0.5315E+01  0.1000E+01
+   7 -0.5666E+07  0.9889E+00  0.1052E+06  0.7878E+02  0.1000E+01
+   8 -0.5650E+07  0.9901E+00  0.6601E+05  0.3211E+03  0.1000E+01
+   9 -0.5669E+07  0.9891E+00 -0.5547E+03  0.2993E+03  0.1000E+01
+  10 -0.5679E+07  0.9879E+00  0.3397E+05  0.1279E+03  0.1000E+01
+ Program ended at 2015-05-26 12:16:35.936
+dim:   0
+sete:                NaN
+Uads:                NaN

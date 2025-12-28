@@ -1,0 +1,91 @@
+
+ &io
+     io_output=           2
+     run_num=           1
+     suffix=a
+     L_movie_xyz= F
+ /
+
+
+ &system
+     lnpt= F
+     lgibbs= F
+     lgrand= F
+     lanes= F
+     lvirial= F
+     lmipsw= F
+     lexpee= F
+     ldielect= F
+     lpbc= T
+     lpbcx= T
+     lpbcy= T
+     lpbcz= T
+     lfold= T
+     lijall= F
+     lchgall= F
+     lewald= T
+     lcutcm= T
+     ltailc= T
+     lshift= F
+     ldual= T
+     L_Coul_CBMC= T
+     lneigh= F
+     lexzeo= F
+     lslit= F
+     lgraphite= F
+     lsami= F
+     lmuir= F
+     lelect_field= T
+     lgaro= F
+     lionic= F
+     L_Ewald_Auto= F
+     lmixlb= T
+     lmixjo= F
+     L_spline= F
+     L_linear= F
+     L_vib_table= F
+     L_bend_table= F
+     L_elect_table= F
+ /
+
+
+ATOMS
+!i type(i) epsi(i) sigi(i) q(i) mass(i) chemid(i) chname(i) [Angstrom, Kelvin, a.u.]; type 1: Lennard-Jones
+  4 1   98.0000  3.75000  0.0000  15.0347000 C   #Tr-UA CH3 alkane
+  5 1   46.0000  3.95000  0.0000  14.0268000 C   #Tr-UA CH2 alkane
+ 57 1    0.0000  0.00000  2.4200   0.0000000 H   #Tr-UA mid-q benz9
+ 58 1    0.0000  0.00000 -1.2100   0.0000000 H   #Tr-UA pi-q benz9
+ 59 1   21.0000  3.88000  0.0000  12.0110000 C   #Tr-UA C arom tolu
+196 1   15.0000  4.50000  0.1400  12.0110000 c   #Tr-UA C aro nitro
+197 1   40.0000  3.31000  0.8200  14.0070000 N   #Tr-UA N nitro
+198 1   80.0000  2.90000 -0.4800  15.9990000 O   #Tr-UA O nitro
+199 1   48.0000  3.74000  0.0000  13.0191000 C   #Tr-UA CH benzene9
+END ATOMS
+
+NONBOND
+!i j type(ij) epsi(ij) sigi(ij) [Angstrom, Kelvin, a.u.]; type 1: Lennard-Jones
+END NONBOND
+
+BONDS
+!i type(i) brvib(i) brvibk(i) [Angstrom]; type 1: U = brvibk * ( r_ij - brvib ) ^ 2
+  1 1 1.54000   0.00000
+ 47 1 1.40000   0.00000
+ 56 1 1.49000   0.00000
+ 57 1 1.22500   0.00000
+ 58 1 0.78500   0.00000
+END BONDS
+
+ANGLES
+!i type(i) brben(i) brbenk(i) [degree]; type 1: U = brbenk * ( theta_ijk - brben ) ^ 2 [radian]
+  1 1 114.0000   31250.0
+ 70 1 111.5000   40284.0
+ 71 1 125.0000   40284.0
+ 72 1 120.0000   0.00000
+END ANGLES
+
+DIHEDRALS
+!i type(i) vtt0(i) vtt1(i) vtt2(i) vtt3(i); !!!check vtorso.f, calctor.f!!!
+!===Begin TraPPE-UA alkane===
+  1 1  0.0  355.030  -68.190  791.320  0.0  0.0  0.0  0.0  0.0  0.0  #for linear segment (OPLS: Jorgensen, Madura, Swenson JACS 1984 106, 813)
+ 32 6 69.2 41.4 -14.5 19.1 8.03 2.91 0.95 0.0 0.0 0.0  #added 7/12/06 C-C-N-O torsion for nitro group
+END DIHEDRALS

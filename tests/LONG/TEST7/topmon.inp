@@ -1,0 +1,110 @@
+
+ &io
+     io_output=           2
+     run_num=           1
+     suffix=a
+     L_movie_xyz= F
+ /
+
+
+ &system
+     lnpt= T
+     lgibbs= T
+     lgrand= F
+     lanes= F
+     lvirial= F
+     lmipsw= F
+     lexpee= F
+     ldielect= F
+     lpbc= T
+     lpbcx= T
+     lpbcy= T
+     lpbcz= T
+     lfold= T
+     lijall= F
+     lchgall= F
+     lewald= T
+     lcutcm= T
+     ltailc= F
+     lshift= F
+     ldual= T
+     L_Coul_CBMC= T
+     lneigh= F
+     lexzeo= F
+     lslit= F
+     lgraphite= F
+     lsami= F
+     lmuir= F
+     lelect_field= F
+     lgaro= F
+     lionic= T
+     L_Ewald_Auto= F
+     lmixlb= T
+     lmixjo= F
+     L_spline= F
+     L_linear= F
+     L_vib_table= F
+     L_bend_table= F
+     L_elect_table= F
+ /
+
+
+ATOMS
+!i type(i) epsi(i) sigi(i) q(i) mass(i) chemid(i) chname(i) [Angstrom, Kelvin, a.u.]; type 1: Lennard-Jones
+  4 1   98.0000  3.75000  0.0000  15.0347000 C   #Tr-UA CH3 alkane
+  5 1   46.0000  3.95000  0.0000  14.0268000 C   #Tr-UA CH2 alkane
+ 56 1   50.5000  3.69500  0.0000  13.0191000 C   #Tr-UA CH benzene6
+ 60 1   30.0000  3.70000  0.0000  12.0110000 C   #Tr-UA C arom naph
+ 61 1    0.0000  0.00000  0.4350   1.0079000 H   #Tr-UA H alkanol
+114 1   78.0000  3.15400  0.0000  15.9990000 O   #TIP4P O water
+115 1    0.0000  0.00000  0.5200   1.0079000 H   #TIP4P H water
+116 1    0.0000  0.00000 -1.0400   0.0000000 M   #TIP4P M water
+124 1    4.0000  3.11000  0.0000   4.0026000 HE   #TraPPE helium
+151 1   60.0000  2.95000 -0.3980  14.0070000 N   #Tr-UA N nitrile
+152 1   60.0000  3.55000  0.1290  12.0110000 C   #Tr-UA C nitrile
+154 1   98.0000  3.75000  0.2690  15.0347000 C   #Tr-UA CH3 nitrile
+177 1    0.0000  0.00000  1.2160  28.0899000 Si   #[Si]-O-Si
+178 1   70.0000  3.35000 -0.6080  15.9994000 O   #Si-[O]-Si
+179 1    0.5000  6.40000  0.3040  28.0000000 Si   #O-[Si]-CH2
+180 1   98.0000  3.75000  0.0000  15.0347000 C   #[CH3]-Si-O
+181 1   46.0000  3.95000  0.0000  14.0268000 C   #[CH2]-Si-O
+183 1   70.0000  3.35000 -0.7390  16.0000000 O   #H-[O]-Si
+203 1   20.0000  1.60000  0.0000  13.0910000 C6H6   #stage 1 benzene
+204 1   30.0000  2.10000  0.0000  13.0910000 C6H6   #stage 2 benzene
+205 1   37.0000  2.50000  0.0000  13.0910000 C6H6   #stage 3 benzene
+206 1   42.0000  2.90000  0.0000  13.0910000 C6H6   #stage 4 benzene
+207 1   46.0000  3.30000  0.0000  13.0910000 C6H6   #stage 5 benzene
+END ATOMS
+
+NONBOND
+!i j type(ij) epsi(ij) sigi(ij) [Angstrom, Kelvin, a.u.]; type 1: Lennard-Jones
+END NONBOND
+
+BONDS
+!i type(i) brvib(i) brvibk(i) [Angstrom]; type 1: U = brvibk * ( r_ij - brvib ) ^ 2
+  1 1 1.54000   0.00000
+ 16 1 0.96000   0.00000
+ 26 1 0.95720   0.00000
+ 27 1 0.15000   0.00000
+ 48 1 1.15700   0.00000
+ 56 1 1.49000   0.00000
+ 57 1 1.22500   0.00000
+END BONDS
+
+ANGLES
+!i type(i) brben(i) brbenk(i) [degree]; type 1: U = brbenk * ( theta_ijk - brben ) ^ 2 [radian]
+  1 1 114.0000   31250.0
+  3 1 109.4700   31250.0
+ 44 1 104.5200   0.00000
+ 46 1 108.5000   0.00000
+ 49 1 180.0000   0.00000
+ 71 1 125.0000   40284.0
+END ANGLES
+
+DIHEDRALS
+!i type(i) vtt0(i) vtt1(i) vtt2(i) vtt3(i); !!!check vtorso.f, calctor.f!!!
+!===Begin TraPPE-UA alkane===
+  1 1  0.0  355.030  -68.190  791.320  0.0  0.0  0.0  0.0  0.0  0.0  #for linear segment (OPLS: Jorgensen, Madura, Swenson JACS 1984 106, 813)
+  3 1  0.0  0.0  0.0  461.290  0.0  0.0  0.0  0.0  0.0  0.0  #for segment containing a quaternary carbon C as mid-segment (Mundy et al, Faraday Disc 104, 17-36 (1996))
+ 23 3 163.56 3 0.0  #Jorgensen potential for segment containing a (H-)-O-C-(CH3)_3 OPLS
+END DIHEDRALS
